@@ -2,9 +2,6 @@ document.querySelector('.btn-menu').addEventListener('click', () => {
     document.querySelector('.nav-menu').classList.toggle('mostrar')
 })
 
-ScrollReveal().reveal('.case')
-ScrollReveal().reveal('.cards', { delay: 400 });
-
 var card2 = document.querySelector(".card2");
 var playing = false;
 
@@ -24,3 +21,5 @@ card2.addEventListener('click',function() {
     }
   });
 });
+
+

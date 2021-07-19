@@ -553,20 +553,187 @@ hr {
   }
   
   @media screen and (max-width: 64rem){
+
+    .back .inner p {
+
+        font-size: 12px;
+    }
+
     .col{
       width: calc(33.333333% - 2rem);
     }
   }
   
   @media screen and (max-width: 48rem){
+
+    .back .inner p {
+
+        font-size: 10px;
+    }
     .col{
       width: calc(50% - 2rem);
     }
   }
   
   @media screen and (max-width: 32rem){
+    .back .inner p {
+
+        font-size: 8px;
+    }
     .col{
       width: 100%;
       margin: 0 0 2rem 0;
     }
   }
+
+  /*Cards de integrantes*/
+
+  .title{
+
+    color: aliceblue;
+    font-size: 30px;
+    -webkit-text-stroke: 1px black;
+    text-align: center;
+
+  }
+
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    min-height: 100vh;
+  }
+  
+  .wrap {
+      
+    margin: 2rem;
+  }
+  
+  .container--1 {
+    --rX: 0;
+    --rY: 0;
+    --bX: 50%;
+    --bY: 80%;
+  
+    width: 20rem;
+    height: 26rem;
+    border: 1px;
+    border-radius: 1.6rem;
+    padding: 4rem;
+  
+    display: flex;
+    align-items: flex-end;
+  
+    position: relative;
+    transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+  
+    background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url("img/Valeria.jpg");
+    background-position: var(--bX) var(--bY);
+    background-size: 20rem auto;
+    box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+  
+    transition: transform .6s 1s;
+  }
+
+  .container--2 {
+
+    --rX: 0;
+    --rY: 0;
+    --bX: 50%;
+    --bY: 80%;
+  
+    width: 20rem;
+    height: 26rem;
+    border: 1px;
+    border-radius: 1.6rem;
+    padding: 4rem;
+  
+    display: flex;
+    align-items: flex-end;
+  
+    position: relative;
+    transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+  
+    background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url("img/Julián.jpeg");
+    background-position: var(--bX) var(--bY);
+    background-size: 20rem auto;
+    box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+
+  }
+
+  .container--3 {
+
+    --rX: 0;
+    --rY: 0;
+    --bX: 50%;
+    --bY: 80%;
+  
+    width: 20rem;
+    height: 26rem;
+    border: 1px;
+    border-radius: 1.6rem;
+    padding: 4rem;
+  
+    display: flex;
+    align-items: flex-end;
+  
+    position: relative;
+    transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+  
+    background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url("img/Alejandro.jpeg");
+    background-position: var(--bX) var(--bY);
+    background-size: 20rem auto;
+    box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+
+  }
+  
+  .container::before,.container::after {
+    content: "";
+  
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #fff;
+  
+    position: absolute;
+    z-index: 2;
+  
+    opacity: .3;
+    transition: .3s;
+  }
+  
+  .container::before {
+    top: 2rem;
+    right: 2rem;
+  
+    border-bottom-width: 0;
+    border-left-width: 0;
+  }
+  
+  .container::after {
+    bottom: 2rem;
+    left: 2rem;
+  
+    border-top-width: 0;
+    border-right-width: 0;
+  }
+  
+  .container--active {
+    transition: none;
+  }
+  
+  .container p {
+    color: hsla(0, 0%, 100%, .9);
+    font-size: 2.2rem;
+  }
+  
+  .wrap:hover .container::before,.wrap:hover .container::after {
+    width: calc(100% - 4rem);
+    height: calc(100% - 4rem);
+  }
+  
+
+  
